@@ -1,0 +1,26 @@
+get:
+  tags:
+    - Basefee API
+  summary: Retrieve the latest base fee
+  operationId: getBaseFee
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/GetBasefeeResponse.yaml
+    '400':
+      description: Bad Request
+      content:
+        '*/*':
+          schema:
+            type: object
+            additionalProperties:
+              type: string
+    '500':
+      description: Internal Server Error
+      content:
+        '*/*':
+          schema:
+            $ref: ../components/schemas/ExceptionResponseBody.yaml
