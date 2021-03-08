@@ -1,0 +1,34 @@
+openapi: 3.0.1
+info:
+  title: Backbone Cabal EIP1559
+  description: >+
+    This component aims to help with the development of EIP-1559 since there are
+    no wallet providers nor web3 libraries supporting new format transactions.
+
+
+    Don't use it in production and use only debug private keys.
+
+  contact:
+    email: janitor@manifoldfinance.com
+  license:
+    name: Apache-2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0'
+servers:
+  - url: 'http://localhost:8080'
+    variables: {}
+  - url: 'http://eip1559.backbonecabal.xyz:8080/'
+    variables: {}
+tags:
+  - name: Transaction API
+    description: Transaction Web API documentation
+  - name: Basefee API
+    description: Basefee Web API documentation
+paths:
+  /basefee:
+    $ref: paths/basefee.yaml
+  '/basefee/{block}':
+    $ref: 'paths/basefee@{block}.yaml'
+  '/tx/legacy/{privateKey}':
+    $ref: 'paths/tx@legacy@{privateKey}.yaml'
+  '/tx/eip1559/{privateKey}':
+    $ref: 'paths/tx@eip1559@{privateKey}.yaml'

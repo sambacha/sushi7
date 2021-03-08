@@ -1,0 +1,9 @@
+type: object
+properties:
+  errorCode:
+    type: integer
+    format: int32
+  errorLabel:
+    type: string
+  errorMessage:
+    type: string
