@@ -8,7 +8,7 @@ dataSources:
     name: Timelock
     network: mainnet
     source:
-      address: '0x9a8541ddf3a932a9a922b607e9cf7301f1d47bd1'
+      address: "0x9a8541ddf3a932a9a922b607e9cf7301f1d47bd1"
       abi: Timelock
       startBlock: 10736929
     mapping:

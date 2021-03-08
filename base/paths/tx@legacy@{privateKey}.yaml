@@ -17,23 +17,23 @@ post:
           $ref: ../components/schemas/Transaction.yaml
     required: true
   responses:
-    '200':
+    "200":
       description: OK
       content:
         application/json:
           schema:
             $ref: ../components/schemas/SubmitTransactionResponse.yaml
-    '400':
+    "400":
       description: Bad Request
       content:
-        '*/*':
+        "*/*":
           schema:
             type: object
             additionalProperties:
               type: string
-    '500':
+    "500":
       description: Internal Server Error
       content:
-        '*/*':
+        "*/*":
           schema:
             $ref: ../components/schemas/ExceptionResponseBody.yaml

@@ -5,7 +5,12 @@ type _Schema_
     name: "tokenSearch"
     language: en
     algorithm: rank
-    include: [{ entity: "Token", fields: [{ name: "id" }, { name: "name" }, { name: "symbol" }] }]
+    include: [
+      {
+        entity: "Token"
+        fields: [{ name: "id" }, { name: "name" }, { name: "symbol" }]
+      }
+    ]
   )
   # Pair
   @fulltext(
@@ -15,7 +20,12 @@ type _Schema_
     include: [{ entity: "Pair", fields: [{ name: "id" }, { name: "name" }] }]
   )
   # User
-  @fulltext(name: "userSearch", language: en, algorithm: rank, include: [{ entity: "User", fields: [{ name: "id" }] }])
+  @fulltext(
+    name: "userSearch"
+    language: en
+    algorithm: rank
+    include: [{ entity: "User", fields: [{ name: "id" }] }]
+  )
 
 # User
 type User @entity {
@@ -277,7 +287,8 @@ type Pair @entity {
   liquidityPositions: [LiquidityPosition!]! @derivedFrom(field: "pair")
 
   # Liquidity position snapshots
-  liquidityPositionSnapshots: [LiquidityPositionSnapshot!]! @derivedFrom(field: "pair")
+  liquidityPositionSnapshots: [LiquidityPositionSnapshot!]!
+    @derivedFrom(field: "pair")
 
   # Pair day data
   dayData: [PairDayData!]! @derivedFrom(field: "pair")
@@ -368,7 +379,8 @@ type LiquidityPosition @entity {
   user: User!
   pair: Pair!
   liquidityTokenBalance: BigDecimal!
-  snapshots: [LiquidityPositionSnapshot]! @derivedFrom(field: "liquidityPosition")
+  snapshots: [LiquidityPositionSnapshot]!
+    @derivedFrom(field: "liquidityPosition")
   block: Int!
   timestamp: Int!
 }

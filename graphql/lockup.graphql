@@ -53,7 +53,7 @@ type User @entity {
 
   # Sushi Harevested Since Lockup
   sushiHarvestedSinceLockup: BigDecimal!
-  
+
   # Sushi harvested since lockup USD
   sushiHarvestedSinceLockupUSD: BigDecimal!
 }

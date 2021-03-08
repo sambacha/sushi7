@@ -13,14 +13,14 @@ properties:
     minLength: 42
     type: string
     description: the recipient address
-    example: '0x61aCB88dA0DBA1A43592f7cc548b3319Fa615e1b'
+    example: "0x61aCB88dA0DBA1A43592f7cc548b3319Fa615e1b"
   value:
     type: integer
-    description: 'the amount of ETH to send, in WEI'
+    description: "the amount of ETH to send, in WEI"
     example: 1000000
   gasPrice:
     type: integer
-    description: 'the gas price of the transaction, in WEI'
+    description: "the gas price of the transaction, in WEI"
     example: 1000
   gasLimit:
     type: integer
@@ -28,9 +28,9 @@ properties:
     example: 21000
   minerBribe:
     type: integer
-    description: 'the miner bribe, in WEI'
+    description: "the miner bribe, in WEI"
     example: 1000
   feecap:
     type: integer
-    description: 'the maximum of ETH the user is willing to pay for the transaction, in WEI'
+    description: "the maximum of ETH the user is willing to pay for the transaction, in WEI"
     example: 1000000000

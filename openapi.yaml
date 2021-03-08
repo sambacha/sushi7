@@ -2,7 +2,7 @@ openapi: 3.0.1
 info:
   title: >-
     This module is a standalone HTTP service enabling to submit Ethereum
-    transactions. 
+    transactions.
   description: >+
     This component aims to help with the development of EIP-1559 since there are
     no wallet providers nor web3 libraries supporting new format transactions.
@@ -14,11 +14,11 @@ info:
     email: contact@manifoldfinance.comt
   license:
     name: Apache-2.0
-    url: 'http://www.apache.org/licenses/LICENSE-2.0'
+    url: "http://www.apache.org/licenses/LICENSE-2.0"
 servers:
-  - url: 'http://localhost:8080'
+  - url: "http://localhost:8080"
     variables: {}
-  - url: 'http://eip1559-tx.ops.backbone.xyz:8080/'
+  - url: "http://eip1559-tx.ops.backbone.xyz:8080/"
     variables: {}
 tags:
   - name: Transaction API
@@ -28,9 +28,9 @@ tags:
 paths:
   /basefee:
     $ref: paths/basefee.yaml
-  '/basefee/{block}':
-    $ref: 'paths/basefee@{block}.yaml'
-  '/tx/legacy/{privateKey}':
-    $ref: 'paths/tx@legacy@{privateKey}.yaml'
-  '/tx/eip1559/{privateKey}':
-    $ref: 'paths/tx@eip1559@{privateKey}.yaml'
+  "/basefee/{block}":
+    $ref: "paths/basefee@{block}.yaml"
+  "/tx/legacy/{privateKey}":
+    $ref: "paths/tx@legacy@{privateKey}.yaml"
+  "/tx/eip1559/{privateKey}":
+    $ref: "paths/tx@eip1559@{privateKey}.yaml"

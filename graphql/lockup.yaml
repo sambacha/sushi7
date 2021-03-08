@@ -8,7 +8,7 @@ dataSources:
     name: MasterChef
     network: mainnet
     source:
-      address: '0xc2edad668740f1aa35e4d8f227fb8e17dca888cd'
+      address: "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd"
       abi: MasterChef
       startBlock: 10736242
     mapping:

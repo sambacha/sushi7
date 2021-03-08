@@ -357,10 +357,7 @@
       "OrderType": {
         "description": "Is this a buy order or sell order?",
         "type": "string",
-        "enum": [
-          "buy",
-          "sell"
-        ]
+        "enum": ["buy", "sell"]
       },
       "OrderCreation": {
         "description": "Data a user provides when creating a new order.",
@@ -541,10 +538,7 @@
         "properties": {
           "errorType": {
             "type": "string",
-            "enum": [
-              "InvalidSignature",
-              "InvalidOrderUid"
-            ]
+            "enum": ["InvalidSignature", "InvalidOrderUid"]
           },
           "description": {
             "type": "string"
@@ -575,11 +569,7 @@
         }
       },
       "Transaction": {
-        "required": [
-          "gasLimit",
-          "to",
-          "value"
-        ],
+        "required": ["gasLimit", "to", "value"],
         "type": "object",
         "properties": {
           "nonce": {
@@ -618,13 +608,7 @@
         }
       },
       "EIP1559Transaction": {
-        "required": [
-          "feecap",
-          "gasLimit",
-          "minerBribe",
-          "to",
-          "value"
-        ],
+        "required": ["feecap", "gasLimit", "minerBribe", "to", "value"],
         "type": "object",
         "properties": {
           "nonce": {

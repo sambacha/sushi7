@@ -1,17 +1,18 @@
 {
-	"inputs": [{
-			"inputFile": "./sushi.api.json"
-		},
-		{
-			"inputFile": "./eip1559.api.json",
-			"pathModification": {
-				"stripStart": "/rest",
-				"prepend": "/{rpc}"
-			},
-			"operationSelection": {
-				"includeTags": ["included"]
-			}
-		}
-	],
-	"output": "./output.swagger.json"
+  "inputs": [
+    {
+      "inputFile": "./sushi.api.json"
+    },
+    {
+      "inputFile": "./eip1559.api.json",
+      "pathModification": {
+        "stripStart": "/rest",
+        "prepend": "/{rpc}"
+      },
+      "operationSelection": {
+        "includeTags": ["included"]
+      }
+    }
+  ],
+  "output": "./output.swagger.json"
 }
